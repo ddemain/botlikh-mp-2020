@@ -1,22 +1,22 @@
 PATTERNS
-NumOneStem ClassMarker NumOneSuffix
-NumStem NumSuffix
+One_NumStem ClassMarker One_NumSuffix
+(TwoToTen_NumStem | Big_NumStem) NumSuffix
 
 LEXICON ClassMarker
 <m>:w
 <f>:j
 <n>:b
 
-LEXICON NumOneSuffix
+LEXICON One_NumSuffix
 <card>:
 
 LEXICON NumSuffix
 <card>:da
 
-LEXICON NumOneStem
+LEXICON One_NumStem
 1:ce
  
-LEXICON NumStem
+LEXICON TwoToTen_NumStem
 2:k'e
 3:habu
 4:buʁu
@@ -26,5 +26,7 @@ LEXICON NumStem
 8:biƛ'i
 9:hač'a
 10:hac'a
+
+LEXICON Big_NumStem
 100:bešunu
 1000:azaru
