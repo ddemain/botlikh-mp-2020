@@ -1,0 +1,25 @@
+PATTERNS
+NumOneStem ClassMarker
+NumStem NumSuffix
+
+LEXICON ClassMarker
+<m>:w
+<f>:j
+<n>:b
+
+LEXICON NumSuffix
+<card>:da
+
+LEXICON NumOneStem
+1:ce
+ 
+LEXICON NumStem
+2:k'e
+3:habu
+4:buʁu
+5:ištu
+6:inƛi
+7:haƛ'u
+8:biƛ'i
+9:hač'a
+10:hac'a
