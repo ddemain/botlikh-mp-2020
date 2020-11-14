@@ -1,11 +1,14 @@
 PATTERNS
-NumOneStem ClassMarker
+NumOneStem ClassMarker NumOneSuffix
 NumStem NumSuffix
 
 LEXICON ClassMarker
 <m>:w
 <f>:j
 <n>:b
+
+LEXICON NumOneSuffix
+<card>:
 
 LEXICON NumSuffix
 <card>:da
