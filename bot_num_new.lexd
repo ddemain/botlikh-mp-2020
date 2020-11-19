@@ -1,0 +1,77 @@
+
+PATTERNS
+MilEnd|(Mil? CentEnd|(Cent? DecEnd|(Dec? One|Basic)))
+
+PATTERN MilEnd
+Mil_NumStem|(Basic_NumStem MilSuffix) CardSuffix
+
+PATTERN Mil
+Mil_NumStem|(Basic_NumStem MilSuffix) CelatSuffix
+
+PATTERN CentEnd
+Cent_NumStem|(Basic_NumStem CentSuffix) CardSuffix
+
+PATTERN Cent
+Cent_NumStem|(Basic_NumStem CentSuffix) CelatSuffix
+
+PATTERN DecEnd
+Dec_NumStem|(Basic_NumStem DecSuffix) CardSuffix
+
+PATTERN Dec
+Dec_NumStem|(Basic_NumStem DecSuffix) CompSuffix
+
+PATTERN One
+One_NumStem One_CardSuffix ClassMarker
+
+PATTERN Basic
+Basic_NumStem CardSuffix
+
+
+
+LEXICON ClassMarker
+<m>:w
+<f>:j
+<n>:b
+
+LEXICON One_CardSuffix
+<card>:
+
+LEXICON CardSuffix
+<card>:da
+
+LEXICON DecSuffix
+*10:c'ali
+
+LEXICON CentSuffix
+*100:bešun
+
+LEXICON MilSuffix
+*1000:azaru
+
+LEXICON CompSuffix
++:ɬi
+
+LEXICON CelatSuffix
++:č'uku
+
+LEXICON One_NumStem
+1:ce
+
+LEXICON Basic_NumStem
+2:k'e
+3:habu
+4:buʁu
+5:ištu
+6:inƛi
+7:haƛ'u
+8:biƛ'i
+9:hač'a
+
+LEXICON Dec_NumStem
+10:hac'a
+
+LEXICON Cent_NumStem
+100:bešunu
+
+LEXICON Mil_NumStem
+1000:azaru
