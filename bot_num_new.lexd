@@ -1,4 +1,3 @@
-
 PATTERNS
 MilEnd|(Mil? CentEnd|(Cent? DecEnd|(Dec? One|Basic)))
 
