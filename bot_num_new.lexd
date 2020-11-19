@@ -1,28 +1,8 @@
 PATTERNS
-MilEnd|(Mil? CentEnd|(Cent? DecEnd|(Dec? One|Basic)))
-
-PATTERN MilEnd
-Mil_NumStem|(Basic_NumStem MilSuffix) CardSuffix
-
-PATTERN Mil
-Mil_NumStem|(Basic_NumStem MilSuffix) CelatSuffix
-
-PATTERN CentEnd
-Cent_NumStem|(Basic_NumStem CentSuffix) CardSuffix
-
-PATTERN Cent
-Cent_NumStem|(Basic_NumStem CentSuffix) CelatSuffix
-
-PATTERN DecEnd
-Dec_NumStem|(Basic_NumStem DecSuffix) CardSuffix
-
-PATTERN Dec
-Dec_NumStem|(Basic_NumStem DecSuffix) CompSuffix
-
-PATTERN One
+Mil_NumStem|(Basic_NumStem MilSuffix) CardSuffix|CelatSuffix
+Cent_NumStem|(Basic_NumStem CentSuffix) CardSuffix|CelatSuffix
+Dec_NumStem|(Basic_NumStem DecSuffix) CardSuffix|CompSuffix
 One_NumStem One_CardSuffix ClassMarker
-
-PATTERN Basic
 Basic_NumStem CardSuffix
 
 
@@ -48,10 +28,10 @@ LEXICON MilSuffix
 *1000:azaru
 
 LEXICON CompSuffix
-+:ɬi
+<comp>:ɬi
 
 LEXICON CelatSuffix
-+:č'uku
+<celat>:č'uku
 
 LEXICON One_NumStem
 1:ce
