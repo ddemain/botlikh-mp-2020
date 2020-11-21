@@ -13,13 +13,13 @@ LEXICON ClassMarker
 <n>:б
 
 LEXICON DecSuffix
-*10:цӏали
+цӏали<dec>:цӏали
 
 LEXICON CentSuffix
-*100:бешун
+бешуну<cent>:бешун
 
 LEXICON MilSuffix
-*1000:азару
+азару<mil>:азару
 
 LEXICON CompSuffix
 <comp>:лъи
@@ -28,23 +28,23 @@ LEXICON CelatSuffix
 <celat>:чӏуку
 
 LEXICON One_NumStem
-1:це
+це<num>:це
 
 LEXICON Basic_NumStem
-2:кӏе
-3:гьабу
-4:бугъу
-5:ишту
-6:инлӏи
-7:гьакьу
-8:бикьи
-9:гьачӏа
+кӏе<num>:кӏе
+гьабу<num>:гьабу
+бугъу<num>:бугъу
+ишту<num>:ишту
+инлӏи<num>:инлӏи
+гьакьу<num>:гьакьу
+бикьи<num>:бикьи
+гьачӏа<num>:гьачӏа
 
 LEXICON Dec_NumStem
-10:гьацӏа
+гьацӏа<num>:гьацӏа
 
 LEXICON Cent_NumStem
-100:бешуну
+бешуну<num>:бешуну
 
 LEXICON Mil_NumStem
-1000:азару
+азару<num>:азару
