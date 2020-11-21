@@ -1,56 +1,50 @@
 PATTERNS
-Mil_NumStem|(Basic_NumStem MilSuffix) CardSuffix|CelatSuffix
-Cent_NumStem|(Basic_NumStem CentSuffix) CardSuffix|CelatSuffix
-Dec_NumStem|(Basic_NumStem DecSuffix) CardSuffix|CompSuffix
-One_NumStem One_CardSuffix ClassMarker
-Basic_NumStem CardSuffix
+Mil_NumStem|(Basic_NumStem MilSuffix) CelatSuffix?
+Cent_NumStem|(Basic_NumStem CentSuffix) CelatSuffix?
+Dec_NumStem|(Basic_NumStem DecSuffix) CompSuffix?
+One_NumStem ClassMarker
+Basic_NumStem
 
 
 
 LEXICON ClassMarker
-<m>:w
-<f>:j
-<n>:b
-
-LEXICON One_CardSuffix
-<card>:
-
-LEXICON CardSuffix
-<card>:da
+<m>:в
+<f>:й
+<n>:б
 
 LEXICON DecSuffix
-*10:c'ali
+*10:цӏали
 
 LEXICON CentSuffix
-*100:bešun
+*100:бешун
 
 LEXICON MilSuffix
-*1000:azaru
+*1000:азару
 
 LEXICON CompSuffix
-<comp>:ɬi
+<comp>:лъи
 
 LEXICON CelatSuffix
-<celat>:č'uku
+<celat>:чӏуку
 
 LEXICON One_NumStem
-1:ce
+1:це
 
 LEXICON Basic_NumStem
-2:k'e
-3:habu
-4:buʁu
-5:ištu
-6:inƛi
-7:haƛ'u
-8:biƛ'i
-9:hač'a
+2:кӏе
+3:гьабу
+4:бугъу
+5:ишту
+6:инлӏи
+7:гьакьу
+8:бикьи
+9:гьачӏа
 
 LEXICON Dec_NumStem
-10:hac'a
+10:гьацӏа
 
 LEXICON Cent_NumStem
-100:bešunu
+100:бешуну
 
 LEXICON Mil_NumStem
-1000:azaru
+1000:азару
