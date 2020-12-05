@@ -1,9 +1,8 @@
 PATTERNS
-Mil_NumStem|(Basic_NumStem MilSuffix) CelatSuffix?
-Cent_NumStem|(Basic_NumStem CentSuffix) CelatSuffix?
-Dec_NumStem|(Basic_NumStem DecSuffix) CompSuffix?
-One_NumStem ClassMarker
-Basic_NumStem
+Big(1)[celat]:Big(1)|(Basic Big(1)[celat]:Big(2)) [<num>:]  CelatSuffix?
+Big(1)[comp]:Big(1)|(Basic Big(1)[comp]:Big(2)) [<num>:] CompSuffix?
+One ClassMarker
+Basic
 
 
 
@@ -12,14 +11,13 @@ LEXICON ClassMarker
 <f>:й
 <n>:б
 
-LEXICON DecSuffix
-цӏали<dec>:цӏали
+LEXICON Big(2)
+гьацӏа[comp]	цӏали 
+бешуну[celat]	бешун
+азару[celat]	азару
 
-LEXICON CentSuffix
-бешуну<cent>:бешун
-
-LEXICON MilSuffix
-азару<mil>:азару
+LEXICON NumSuffix
+<num>:
 
 LEXICON CompSuffix
 <comp>:лъи
@@ -27,10 +25,10 @@ LEXICON CompSuffix
 LEXICON CelatSuffix
 <celat>:чӏуку
 
-LEXICON One_NumStem
+LEXICON One
 це<num>:це
 
-LEXICON Basic_NumStem
+LEXICON Basic
 кӏе<num>:кӏе
 гьабу<num>:гьабу
 бугъу<num>:бугъу
@@ -39,12 +37,3 @@ LEXICON Basic_NumStem
 гьакьу<num>:гьакьу
 бикьи<num>:бикьи
 гьачӏа<num>:гьачӏа
-
-LEXICON Dec_NumStem
-гьацӏа<num>:гьацӏа
-
-LEXICON Cent_NumStem
-бешуну<num>:бешуну
-
-LEXICON Mil_NumStem
-азару<num>:азару
