@@ -7,9 +7,11 @@ Basic
 
 
 LEXICON ClassMarker
-<m>:в
-<f>:й
-<n>:б
+<sg><m>:в
+<sg><f>:й
+<sg><n>:б
+<pl><an>:л
+<pl><inan>:б
 
 LEXICON Big(2)
 гьацӏа[comp]	цӏали 
