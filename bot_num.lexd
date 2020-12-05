@@ -1,6 +1,6 @@
 PATTERNS
-Big(1)[celat]|(Basic Big(1)[celat]:Big(2)) [<num>:] CelatSuffix?
-Big(1)[comp]|(Basic Big(1)[comp]:Big(2)) [<num>:] CompSuffix?
+Big(1)[celat]|(Basic Big(1):Big(2)[celat]) [<num>:] CelatSuffix?
+Big(1)[comp]|(Basic Big(1):Big(2)[comp]) [<num>:] CompSuffix?
 One ClassMarker
 Basic
 
