@@ -1,8 +1,8 @@
 PATTERNS
-Big(1)[celat]|(Basic Big(1):Big(2)[celat]) [<num>:] CelatSuffix?
-Big(1)[comp]|(Basic Big(1):Big(2)[comp]) [<num>:] CompSuffix?
+Big(1)[celat]|(Basic Big(1):Big(2)[celat]) [<num>:] NumSuffix|CelatSuffix
+Big(1)[comp]|(Basic Big(1):Big(2)[comp]) [<num>:] NumSuffix|CompSuffix
 One ClassMarker
-Basic
+Basic NumSuffix
 
 
 
@@ -17,6 +17,9 @@ LEXICON Big(2)
 гьацӏа[comp]	цӏали 
 бешуну[celat]	бешун
 азару[celat]	азару
+
+LEXICON NumSuffix
+:да
 
 LEXICON CompSuffix
 <comp>:лъи
