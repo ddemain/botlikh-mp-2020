@@ -1,0 +1,52 @@
+PATTERNS
+Personal[-gen]
+Personal[gen,sg] [:+] CM[sg]
+Personal[gen,pl] [:+] CM[pl]
+Demonstrative [:+] CM
+
+LEXICON Personal
+ден<pn><abs>:ден
+ден<pn><erg>:ишкур
+ден<pn><dat>:ди
+ден<pn><gen>:ди[gen,sg]
+мин<pn><abs>:мин
+мин<pn><erg>:мин
+мин<pn><dat>:ду
+мин<pn><gen>:ди[gen,sg]
+илӏи<pn><abs>:илӏи
+илӏи<pn><erg>:илӏи
+илӏи<pn><dat>:илӏи
+илӏи<pn><gen>:илӏи[gen,pl]
+ищи<pn><abs>:ищи
+ищи<pn><erg>:ищи
+ищи<pn><dat>:ищи
+ищи<pn><gen>:ищи[gen,pl]
+бишти<pn><abs>:бишти
+бишти<pn><erg>:бишти
+бишти<pn><dat>:бишти
+бишти<pn><gen>:бишти[gen,pl]
+
+LEXICON Demonstrative
+гьа<pn>:гьа
+га<pn>:га
+гьу<pn>:гьу
+го<pn>:го
+до<pn>:до
+
+LEXICON Interrogative
+е<pn><abs>:eᵸ
+е<pn><obl><an>:лӏлӏе
+е<pn><obl><inan>:лӏлӏун
+
+LEXICON Indefinite
+
+LEXICON ClassMarker
+<sg><m>:в[sg]
+<sg><f>:й[sg]
+<sg><n>:б[sg]
+<pl><an>:р[pl]
+<pl><inan>:б[pl]
+
+ALIAS ClassMarker CM
+
+
