@@ -40,13 +40,5 @@ LEXICON Interrogative
 
 LEXICON Indefinite
 
-LEXICON ClassMarker
-<sg><m>:в[sg]
-<sg><f>:й[sg]
-<sg><n>:б[sg]
-<pl><an>:р[pl]
-<pl><inan>:б[pl]
-
-ALIAS ClassMarker CM
-
-
+#lexicon CM
+#lexicon CaseEndAttr

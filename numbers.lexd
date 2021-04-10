@@ -1,37 +1,77 @@
 PATTERNS
-Big(1)[celat]|(Basic Big(1):Big(2)[celat]) [<num>:] NumSuffix|CelatSuffix
-Big(1)[comp]|(Basic Big(1):Big(2)[comp]) [<num>:] NumSuffix|CompSuffix
-One [:+] ClassMarker
-Basic NumSuffix
+NumCore NumEnd
+One CM|CaseEndAttr[sg]
+#одни?
+Big[i] | (Basic Big[d,celat]) LinkSuffix[celat]
+Big[i] | (Basic Big[d,comp]) LinkSuffix[comp]
+MultNumCore MultSuffix 
+
+PATTERN NumCore
+Big[i]
+Basic > Big[d]
+
+PATTERN NumEnd
+DistSuffix
+CardSuffix > CaseEndAttr[sg]
+[:й] (OrdSuffix[an] CM[-inan]) | (OrdSuffix[inan] CM[-an])
+
+PATTERN MultNumCore
+One[card]
+Basic[-excm]
+Big[i]
+Basic > Big[d]
+
+LEXICON MultSuffix
+<mult>:рцӏи
+
+LEXICON DistSuffix
+<dist>:ркьа
+
+LEXICON CaseEndAttr
+<erg><I>:щуди[sg]
+<erg><II>:лълъиди[sg]
+<erg><III>:лълъиди[sg]
+<erg><IV>:луди
+<erg><V>:луди
+
+<gen><I>:щуб[sg]
+<gen><II>:лъилъи[sg]
+<gen><III>:лъилъи[sg]
+<gen><IV>:луб
+<gen><V>:луб
+
+<dat><I>:щуй[sg]
+<dat><II>:лъий[sg]
+<dat><III>:лълъий[sg]
+<dat><IV>:луй
+<dat><V>:луй
 
 LEXICON ClassMarker
-<sg><m>:в[sg]
-<sg><f>:й[sg]
-<sg><n>:б[sg]
-<pl><an>:р[pl]
-<pl><inan>:б[pl]
+<I>:в[sg,m]
+<II>:й[sg,f]
+<III>:б[sg,n]
+<IV>:р[pl,an]
+<V>:б[pl,inan]
 
 ALIAS ClassMarker CM
 
-LEXICON Big(2)
-гьацӏа[comp]	цӏали 
-бешуну[celat]	бешун
-азару[celat]	азару
+LEXICON CardSuffix
+<card>:да
 
-LEXICON NumSuffix
-:да
+LEXICON OrdSuffix
+<ord>:хо[inan]
+<ord>:лъа[an]
 
-LEXICON CompSuffix
-<comp>:лъи
-
-LEXICON CelatSuffix
-<celat>:чӏуку
+LEXICON LinkSuffix
+<comp>:лъи[comp]
+<celat>:чӏуку[celat]
 
 LEXICON One
-це<num>:це
+це<num><card>:це[card]
+це<num><ord>:гьечӏиссеъассу[ord]
 
 LEXICON Basic
-кӏе<num>:кӏе
+кӏе<num>:кӏе[excm]
 гьабу<num>:гьабу
 бугъу<num>:бугъу
 ишту<num>:ишту
@@ -39,3 +79,11 @@ LEXICON Basic
 гьакьу<num>:гьакьу
 бикьи<num>:бикьи
 гьачӏа<num>:гьачӏа
+
+LEXICON Big
+гьацӏа<num>:гьацӏа[i]
+гьацӏа<num>:цӏали[d,comp]
+бешуну<num>:бешуну[i]
+бешуну<num>:бешун[d,celat]
+азару<num>:азару[i]
+азару<num>:азару[d,celat]
