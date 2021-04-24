@@ -1,44 +1,107 @@
 PATTERNS
-Personal[-gen]
-Personal[gen,sg] [:+] CM[sg]
-Personal[gen,pl] [:+] CM[pl]
-Demonstrative [:+] CM
+Personal
+Possessive
+Demonstrative
+ReflRecip
+Interrogative
+Indefinite
 
-LEXICON Personal
-ден<pn><abs>:ден
-ден<pn><erg>:ишкур
-ден<pn><dat>:ди
+#############################
+
+PATTERN Personal
+PersonalCore[-gen]
+PersonalCore[gen,sg] CM[sg,m] (CaseEndAttr[m]|LocEnd)?
+PersonalCore[gen,sg] CM[sg,-m] (CaseEndAttr[sg,-m]|LocEnd)?
+PersonalCore[gen,-sg] CM[pl] (CaseEndAttr[-sg]|LocEnd)?
+PersonalCore[dat] LocEnd
+# CM@ATFM CaseEndAttr@ATFM #
+
+PATTERN Demonstrative
+DemCore DemEnd
+DemCore CaseEndAttr
+DemCore LocEnd
+
+PATTERN ReflRecip
+PersonalCore ReflEnd
+ReflCore[abs] CM ReflEnd: :ReflEnd?
+ReflCore[obl] CEACore[sg]|[:ду] CEAEnd ReflEnd: :ReflEnd?
+[<pn>:] :One[card] CaseEndAttr :One[card] :CaseEndAttr [<recip>:]
+
+PATTERN Interrogative
+IntCore[b] CM[-inan] (IntSuffix[an] [<q>:ла])?
+IntCore[b] CM[-an] (IntSuffix[inan] [<q>:ла])?
+IntCore[o] [<q>:ла]
+IntCore[x] CM (IntSuffix [<q>:ла]?)?
+
+PATTERN Indefinite
+ReflCore[abs] CM[sg] :ReflCore[abs] :CM[sg] [<ind>:] CaseEndAttr[sg]?
+IndCore ([:да] CaseEndAttr[pl])?
+IntCore[|[b,x]] CM  IndEnd
+IntCore[o] IndEnd
+[<pn>:] :One[card] CM[sg] [<indef>:дала]   
+
+#############################
+
+LEXICON PersonalCore
+ден<pn><abs>:ден[sg]
+ден<pn><erg>:ишкур[sg]
+ден<pn><dat>:ди[dat,sg]
 ден<pn><gen>:ди[gen,sg]
-мин<pn><abs>:мин
-мин<pn><erg>:мин
-мин<pn><dat>:ду
+мин<pn><abs>:мин[sg]
+мин<pn><erg>:мин[sg]
+мин<pn><dat>:ду[dat,sg]
 мин<pn><gen>:ди[gen,sg]
-илӏи<pn><abs>:илӏи
-илӏи<pn><erg>:илӏи
-илӏи<pn><dat>:илӏи
+илӏи<pn><abs>:илӏи[pl]
+илӏи<pn><erg>:илӏи[pl]
+илӏи<pn><dat>:илӏи[dat,pl]
 илӏи<pn><gen>:илӏи[gen,pl]
-ищи<pn><abs>:ищи
-ищи<pn><erg>:ищи
-ищи<pn><dat>:ищи
+ищи<pn><abs>:ищи[pl]
+ищи<pn><erg>:ищи[pl]
+ищи<pn><dat>:ищи[dat,pl]
 ищи<pn><gen>:ищи[gen,pl]
-бишти<pn><abs>:бишти
-бишти<pn><erg>:бишти
-бишти<pn><dat>:бишти
+бишти<pn><abs>:бишти[pl]
+бишти<pn><erg>:бишти[pl]
+бишти<pn><dat>:бишти[dat,pl]
 бишти<pn><gen>:бишти[gen,pl]
 
-LEXICON Demonstrative
+LEXICON DemCore
 гьа<pn>:гьа
 га<pn>:га
 гьу<pn>:гьу
 го<pn>:го
 до<pn>:до
 
-LEXICON Interrogative
-е<pn><abs>:eᵸ
-е<pn><obl><an>:лӏлӏе
-е<pn><obl><inan>:лӏлӏун
+PATTERN DemEnd
+[<spec>:шту]? [:+] CM
+[<adv>:лълъа]
+[<spec>:ла]
 
-LEXICON Indefinite
+LEXICON ReflCore
+гьи<pn>:гьи[abs]
+ин<pn>:ин[obl]
 
-#lexicon CM
-#lexicon CaseEndAttr
+LEXICON ReflEnd
+<refl>:да
+
+LEXICON IntCore
+э<pn><abs>:эᵸ[b,abs]
+э<pn><obl><an>:лълъе[b,obl]
+э<pn><obl><inan>:лълъун[b,obl]
+эпи<pn>:эпи[o]
+ин<pn>:ин[o]
+чаму<pn>:чаму[o]
+инда<pn>:инда[o]
+ину<pn>:ину[o]
+ишту<pn>:ишту[x]
+
+LEXICON IntSuffix
+<inan>:ху[inan]
+<an>:лъи[an]
+
+LEXICON IndCore
+тIоргу<pn>:тIоргу
+
+LEXICON IndEnd
+<indef>:кIвала
+<indef>:хвала
+

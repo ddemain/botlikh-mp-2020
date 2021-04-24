@@ -33,13 +33,13 @@ LEXICON CaseEndAttr
 <erg><III>:лълъиди[sg]
 <erg><IV>:луди
 <erg><V>:луди
-
+#
 <gen><I>:щуб[sg]
 <gen><II>:лъилъи[sg]
 <gen><III>:лъилъи[sg]
 <gen><IV>:луб
 <gen><V>:луб
-
+#
 <dat><I>:щуй[sg]
 <dat><II>:лъий[sg]
 <dat><III>:лълъий[sg]
@@ -83,7 +83,9 @@ LEXICON Basic
 LEXICON Big
 гьацӏа<num>:гьацӏа[i]
 гьацӏа<num>:цӏали[d,comp]
+#
 бешуну<num>:бешуну[i]
 бешуну<num>:бешун[d,celat]
+#
 азару<num>:азару[i]
 азару<num>:азару[d,celat]
