@@ -1,3 +1,127 @@
+#############################	CLASS MARKERS
+
+LEXICON ClassMarker
+б:в[sg,m]
+б:й[sg,f]
+б:б[sg,n]
+б:р[pl,an]
+б:б[pl,inan]
+
+ALIAS ClassMarker CM
+
+#############################	MAIN CASES 4 ATTRIBUTIVE ARGUMENTS
+
+PATTERN CaseEndAttr
+CEACore CEAEnd|LocEnd
+
+LEXICON CEACore
+:щу[sg,m]
+:лълъи[sg]
+:лу[pl]
+
+LEXICON CEAEnd
+<erg>:ди
+<gen>:б
+#a shitton of work for twol
+<dat>:й
+
+#############################	LOCATIVE CASES
+
+PATTERN LocEnd
+CoreE EndE
+CoreL
+
+LEXICON CoreE
+<sup>:у
+<sup>:е
+<cont>:чу
+<apud>:хе
+<apud>:хи
+<apud>:хъи
+<in>:лӏи
+<in>:лълъу
+<in>:лъи
+<sub>:кьи
+
+LEXICON EndE
+<ess>:0[ess]
+<el>:ру
+<trl>:ку
+
+LEXICON CoreL
+<sup><l>:а
+<cont><l>:чу
+<apud><l>:ха
+<apud><l>:хъа
+<in><l>:лӏа
+<in><l>:лълъа
+<in><l>:лъа
+<sub><l>:кьа
+
+PATTERNS
+NumCore NumEnd
+One CM|CaseEndAttr[sg]
+#одни?
+Big[i]|(Basic Big[d,celat]) LinkSuffix[celat]
+Big[i]|(Basic Big[d,comp]) LinkSuffix[comp]
+MultNumCore MultSuffix 
+
+PATTERN NumCore
+Big[i]
+Basic > Big[d]
+
+PATTERN NumEnd
+DistSuffix
+CardSuffix > CaseEndAttr[sg]
+[:й] (OrdSuffix[an] CM[-inan]) | (OrdSuffix[inan] CM[-an])
+
+PATTERN MultNumCore
+One[card]
+Basic[-excm]
+Big[i]
+Basic > Big[d]
+
+LEXICON MultSuffix
+<mult>:рцӏи
+
+LEXICON DistSuffix
+<dist>:ркьа
+
+LEXICON CardSuffix
+<card>:да
+
+LEXICON OrdSuffix
+<ord>:хо[inan]
+<ord>:лъа[an]
+
+LEXICON LinkSuffix
+<comp>:лъи[comp]
+<celat>:чӏуку[celat]
+
+LEXICON One
+це<num><card>:це[card]
+це<num><ord>:гьечӏиссеъассу[ord]
+
+LEXICON Basic
+кӏе<num>:кӏе[excm]
+гьабу<num>:гьабу
+бугъу<num>:бугъу
+ишту<num>:ишту
+инлӏи<num>:инлӏи
+гьакьу<num>:гьакьу
+бикьи<num>:бикьи
+гьачӏа<num>:гьачӏа
+
+LEXICON Big
+гьацӏа<num>:гьацӏа[i]
+гьацӏа<num>:цӏали[d,comp]
+#
+бешуну<num>:бешуну[i]
+бешуну<num>:бешун[d,celat]
+#
+азару<num>:азару[i]
+азару<num>:азару[d,celat]
+
 PATTERNS
 Personal
 Demonstrative

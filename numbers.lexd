@@ -2,8 +2,8 @@ PATTERNS
 NumCore NumEnd
 One CM|CaseEndAttr[sg]
 #одни?
-Big[i] | (Basic Big[d,celat]) LinkSuffix[celat]
-Big[i] | (Basic Big[d,comp]) LinkSuffix[comp]
+Big[i]|(Basic Big[d,celat]) LinkSuffix[celat]
+Big[i]|(Basic Big[d,comp]) LinkSuffix[comp]
 MultNumCore MultSuffix 
 
 PATTERN NumCore
@@ -26,34 +26,6 @@ LEXICON MultSuffix
 
 LEXICON DistSuffix
 <dist>:ркьа
-
-LEXICON CaseEndAttr
-<erg><I>:щуди[sg]
-<erg><II>:лълъиди[sg]
-<erg><III>:лълъиди[sg]
-<erg><IV>:луди
-<erg><V>:луди
-#
-<gen><I>:щуб[sg]
-<gen><II>:лъилъи[sg]
-<gen><III>:лъилъи[sg]
-<gen><IV>:луб
-<gen><V>:луб
-#
-<dat><I>:щуй[sg]
-<dat><II>:лъий[sg]
-<dat><III>:лълъий[sg]
-<dat><IV>:луй
-<dat><V>:луй
-
-LEXICON ClassMarker
-<I>:в[sg,m]
-<II>:й[sg,f]
-<III>:б[sg,n]
-<IV>:р[pl,an]
-<V>:б[pl,inan]
-
-ALIAS ClassMarker CM
 
 LEXICON CardSuffix
 <card>:да
@@ -89,3 +61,4 @@ LEXICON Big
 #
 азару<num>:азару[i]
 азару<num>:азару[d,celat]
+
