@@ -1,18 +1,18 @@
 #############################	CLASS MARKERS
 
 LEXICON ClassMarker
-б:в[sg,m]
-б:й[sg,f]
-б:б[sg,n]
-б:р[pl,an]
-б:б[pl,inan]
+б:+в+[sg,m]
+б:+й+[sg,f]
+б:+б+[sg,n]
+б:+р+[pl,an]
+б:+б+[pl,inan]
 
 ALIAS ClassMarker CM
 
 #############################	MAIN CASES 4 ATTRIBUTIVE ARGUMENTS
 
 PATTERN CaseEndAttr
-CEACore CEAEnd|LocEnd
+CEACore CEAEnd
 
 LEXICON CEACore
 :щу[sg,m]
@@ -45,8 +45,8 @@ LEXICON CoreE
 
 LEXICON EndE
 <ess>:0[ess]
-<el>:ру
-<trl>:ку
+<el>:ру[ess]
+<trl>:ку[trl]
 
 LEXICON CoreL
 <sup><l>:а
@@ -147,7 +147,7 @@ PATTERN ReflRecip
 PersonalCore ReflEnd
 ReflCore[abs] CM ReflEnd: :ReflEnd?
 ReflCore[obl] CEACore[sg]|[:ду] CEAEnd ReflEnd: :ReflEnd?
-[<pn>:] :One[card] CaseEndAttr :One[card] :CaseEndAttr [<recip>:]
+[<pn>:] :One[card] CEACore CEAEnd :One[card] :CEACore :CEAEnd [<recip>:]
 
 PATTERN Interrogative
 IntCore[b] CM[-inan] (IntSuffix[an] [<q>:ла])?
@@ -194,8 +194,8 @@ LEXICON DemCore
 до<pn>:до
 
 PATTERN DemEnd
-[<spec>:шту]? [:+] CM
-[<adv>:лълъа]
+[<spec>:шту]? CM
+[<adv>:лълъа] EndE[trl]?
 [<spec>:ла]
 
 LEXICON ReflCore
