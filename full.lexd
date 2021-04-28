@@ -44,7 +44,7 @@ LEXICON CoreE
 <sub>:кьи
 
 LEXICON EndE
-<ess>:0[ess]
+<ess>:[ess]
 <el>:ру[ess]
 <trl>:ку[trl]
 
@@ -147,7 +147,6 @@ PATTERN ReflRecip
 PersonalCore ReflEnd
 ReflCore[abs] CM ReflEnd: :ReflEnd?
 ReflCore[obl] CEACore[sg]|[:ду] CEAEnd ReflEnd: :ReflEnd?
-[<pn>:] :One[card] CEACore CEAEnd :One[card] :CEACore :CEAEnd [<recip>:]
 
 PATTERN Interrogative
 IntCore[b] CM[-inan] (IntSuffix[an] [<q>:ла])?
